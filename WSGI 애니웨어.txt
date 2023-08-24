@@ -1,0 +1,19 @@
+import os
+import sys
+
+path = "/home/Royoochan/bookmark2"
+if path not in sys.path:
+    sys.path.append(path)
+
+from django.contrib.staticfiles.handlers import StaticFilesHandler
+from django.core.wsgi import get_wsgi_application
+
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'confin.settings')
+application = StaticFilesHandler (get_wsgi_application())
+
+
+
+
+
+ 파이참 settings.py>DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField' 
