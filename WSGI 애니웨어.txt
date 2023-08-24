@@ -17,3 +17,18 @@ application = StaticFilesHandler (get_wsgi_application())
 
 
  파이참 settings.py>DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField' 
+
+애니웨어 git pull 
+python manage.py collectstatic
+> 
+path = "/home/Royoochan/bookmark2"
+if path not in sys.path:
+    sys.path.append(path)
+
+   >>>>>>>>>>>>>>>
+from django.core.wsgi import get_wsgi_application
+
+
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'confin.settings')
+application = get_wsgi_application()                    >>>>>>>>>>>static 임포트 삭제
+
